@@ -18,9 +18,10 @@ function draw(){
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
     
-    var magnitude = map(value, 0, pAccelerationZ , 0, 10); //le quite el pAccelerationX * pAccelerationY
+    var magnitude = map(value, 0, 2000 , 0, 10); //le quite el pAccelerationX * pAccelerationY
     
     // cuando es en eje Y, hacia la derecha es positivo, izq negativo, reacciona bien
+    // con el eje Z reacciona de manera mas controlada, pero no entiendo en que direccion se mueve
     
     if (magnitude > 0){
         
