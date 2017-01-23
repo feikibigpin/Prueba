@@ -21,7 +21,7 @@ function draw(){
     var magnitude = map(value, 0, 2000 , 0, 10); //le quite el pAccelerationX * pAccelerationY
     
     // cuando es en eje Y, hacia la derecha es positivo, izq negativo, reacciona bien
-    // con el eje Z reacciona de manera mas controlada, pero no entiendo en que direccion se mueve
+    // con el eje Z reacciona de manera mas controlada, hacia adelante es positivo, hacia atras negativo
     
     if (magnitude > 0){
         
@@ -76,7 +76,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = pAccelerationZ ;  //le quite pAccelerationX * pAccelerationY 
+    value = pAccelerationX ;  //le quite pAccelerationX * pAccelerationY 
    
     //create objects
     for (var i = 0; i < value*10; i++){
