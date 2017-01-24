@@ -102,11 +102,11 @@ function shake(){
 */
 function deviceShaken(){
     button3 = createButton("Try again");
-    button3.position((width/7)*5, (height/15)*14);
+    button3.position(width/3,height/3);
     button3.touchStarted(clearEverything);
     
     button1 = createButton("See results");
-    button1.position((width/8)*5, (height/15)*14);
+     button1.position(width/2,height/3);
     button1.touchStarted(results); //en vez de mousePressed para touch es touchStarted
     /*
     button3 = createButton("try again");
