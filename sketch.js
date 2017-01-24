@@ -1,6 +1,6 @@
 var dots = [];
 
-var value;  //starting value of earthquake
+var value = 0;  //starting value of earthquake
 
 var acx;
 var acy;
@@ -25,12 +25,13 @@ var button3;
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
+     angleMode(DEGREES);
 }
 
 function draw(){
      background(204);
      angleMode(DEGREES);
-     soloshake();
+    // soloshake();
     
     var magnitude = int(map(value, 0, 500, 0, 10)); 
     
