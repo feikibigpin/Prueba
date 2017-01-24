@@ -1,7 +1,21 @@
 var dots = [];
 
 var value = 0;  //starting value of earthquake
-    
+
+var button1;
+var button2;
+var button3;
+var myChile;
+var myJapon;
+var myIndonesia;
+var myMexico;
+var myResults;
+
+function preload() {
+    myChile = loadImage("images/9.5.png");
+    myJapon = loadImage("images/9.0.png");  
+    myIndonesia = loadImage("images/8.6.png");
+    myMexico = loadImage("images/8.1.png");
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
@@ -77,7 +91,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = abs(pAccelerationY + pAccelerationX) ;  //le quite pAccelerationX * pAccelerationY 
+    value = abs(pAccelerationY) ;  //le quite pAccelerationX * pAccelerationY 
    
     //create objects
     for (var i = 0; i < value*10; i++){
