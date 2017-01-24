@@ -1,6 +1,6 @@
 var dots = [];
 
-var value = 0;  //starting value of earthquake
+var value;  //starting value of earthquake
 
 var acx;
 var acy;
