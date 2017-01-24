@@ -95,15 +95,12 @@ function shake(){
       }
   
 }
-function tryagain(){
-    shake();
-}
   
 
 function deviceShaken(){
     button3 = createButton("try again");
     button3.position(width/2,height/3);
-    button3.touchStarted(tryagain); //en vez de mousePressed para touch es touchStarted
+    button3.touchStarted(shake); //en vez de mousePressed para touch es touchStarted
     
     acx = abs(pAccelerationX);
     acy = abs(pAccelerationY);
