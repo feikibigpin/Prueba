@@ -92,7 +92,7 @@ function draw(){
   
 }
 function tryagain(){
-    deviceShaken();
+    draw();
 }
   
 
