@@ -21,7 +21,7 @@ var button3;
     //myChile = loadImage("images/9.5.png");
     //myJapon = loadImage("images/9.0.png");  
     //myIndonesia = loadImage("images/8.6.png");
-    myMexico = loadImage("images/8.1.png");
+    //myMexico = loadImage("images/8.1.png");
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
