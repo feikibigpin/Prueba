@@ -91,7 +91,7 @@ function draw(){
 
 function deviceShaken(){
     
-    value = abs(pAccelerationY) ;  //le quite pAccelerationX * pAccelerationY 
+    value = abs(pAccelerationY) + abs(pAccelerationX) ;  //le quite pAccelerationX * pAccelerationY 
    
     //create objects
     for (var i = 0; i < value*10; i++){
