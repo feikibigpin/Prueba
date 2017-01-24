@@ -2,6 +2,10 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
+var acx;
+var acy;
+var acz;
+
 //var button1;
 //var button2;
 //var button3;
@@ -90,8 +94,10 @@ function draw(){
    
 
 function deviceShaken(){
-    
-    value = abs(pAccelerationY) + abs(pAccelerationX) ;  //le quite pAccelerationX * pAccelerationY 
+    acx = abs(pAccelerationX);
+    acy = abs(pAccelerationY);
+    acz = abs(pAccelerationZ);
+    value = acx + acy + acz ;  //le quite pAccelerationX * pAccelerationY 
    
     //create objects
     for (var i = 0; i < value*10; i++){
