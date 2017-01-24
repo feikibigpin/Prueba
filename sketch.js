@@ -5,6 +5,7 @@ var value = 0;  //starting value of earthquake
 var acx;
 var acy;
 var acz;
+var shake;
 
 //var button1;
 //var button2;
@@ -28,7 +29,10 @@ function setup(){
 function draw(){
      background(204);
      angleMode(DEGREES);
+     shake();
+}
     
+function shake(){
      textSize(height/20);
      textAlign(CENTER);
      textStyle(BOLD);
@@ -92,7 +96,7 @@ function draw(){
   
 }
 function tryagain(){
-    draw();
+    shake();
 }
   
 
