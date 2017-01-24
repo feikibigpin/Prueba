@@ -5,8 +5,8 @@ var value;  //starting value of earthquake
 var acx;
 var acy;
 var acz;
-var shake;
-var soloshake;
+//var shake;
+//var soloshake;
 
 //var button1;
 //var button2;
@@ -30,9 +30,44 @@ function setup(){
 function draw(){
      background(204);
      angleMode(DEGREES);
-     shake();
+     soloshake();
+    
+    var magnitude = int(map(value, 0, 500, 0, 10)); 
+    
+    if (value > 0){
+        
+        //CREATE THE ELLIPSE AREA
+    var x = width/2;
+    var y = height/2;
+    var r = value * 2; 
+    
+    noFill();
+    stroke(0);
+    strokeWeight(1);
+    ellipse (x, y, r, r);
+
+    //magnitude indication
+    fill(0);
+    noStroke();    
+    
+    textSize(height/40);
+    textAlign(CENTER);
+    textStyle(NORMAL);
+    text("Magnitude", width/2, height - height/5);
+        
+    textSize(height/20);
+    textAlign(CENTER);
+    textStyle(BOLD);
+    text(magnitude,width/2, height - height/6.7);
+    
+    textSize(height/50);
+    textAlign(CENTER);
+    textStyle(NORMAL);    
+    text(value, width/2, height - height/8);
+    }  
     
 }
+
 function soloshake(){
      textSize(height/20);
      textAlign(CENTER);
@@ -40,8 +75,10 @@ function soloshake(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
-    //var magnitude = norm(value, 6 , 10);
-    
+     value = 0;
+}
+  
+/*    
 function shake(){
      soloshake();
     
@@ -53,7 +90,7 @@ function shake(){
    
 }
   
-
+*/
 function deviceShaken(){
     button3 = createButton("try again");
     button3.position(width/2,height/3);
