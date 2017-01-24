@@ -72,9 +72,7 @@ function draw(){
     text(value, width/2, height - height/8);
         
         
-    button2 = createButton("Try again");
-    button2.position((width/7)*5, (height/15)*14);
-    button2.touchStarted(clearEverything);
+    
     }  
     
 }
@@ -103,10 +101,14 @@ function shake(){
   
 */
 function deviceShaken(){
+    button3 = createButton("Try again");
+    button3.position((width/7)*5, (height/15)*14);
+    button3.touchStarted(clearEverything);
+    /*
     button3 = createButton("try again");
     button3.position(width/2,height/3);
     button3.touchStarted(clearEverything); //en vez de mousePressed para touch es touchStarted
-    
+    */
     acx = abs(pAccelerationX);
     acy = abs(pAccelerationY);
     acz = abs(pAccelerationZ);
