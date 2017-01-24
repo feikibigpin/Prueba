@@ -146,11 +146,6 @@ function QuakeDots(){
 }
 function clearEverything() {
     background(204);
-    textSize(height/20);
-     textAlign(CENTER);
-     textStyle(BOLD);
-     fill(0);
-     noStroke();
-     text("SHAKE YOUR DEVICE", width/2,height - height/1.1); 
+    value = 0;
  
      }
