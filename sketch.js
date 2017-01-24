@@ -17,8 +17,9 @@ function draw(){
      fill(0);
      noStroke();
      text("SHAKE YOUR DEVICE", width/2,height - height/1.2);    
+    var magnitude = norm(value, 6 , 10);
     
-    var magnitude = map(value, 0, 500 , 0, 10); //le quite el pAccelerationX * pAccelerationY
+    //var magnitude = map(value, 0, 500 , 0, 10); //le quite el pAccelerationX * pAccelerationY
     
     // cuando es en eje Y, hacia la derecha es positivo, izq negativo, reacciona bien
     // con el eje Z reacciona de manera mas controlada, hacia adelante es positivo, hacia atras negativo
