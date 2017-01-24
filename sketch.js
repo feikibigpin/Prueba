@@ -2,8 +2,6 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
-var button2;
-
 var acx;
 var acy;
 var acz;
@@ -12,7 +10,7 @@ var acz;
 
 //var button1;
 //var button2;
-//var button3;
+var button3;
 //var myChile;
 //var myJapon;
 //var myIndonesia;
@@ -24,7 +22,7 @@ var acz;
     //myJapon = loadImage("images/9.0.png");  
     //myIndonesia = loadImage("images/8.6.png");
     //myMexico = loadImage("images/8.1.png");
-*/
+
 function setup(){
      createCanvas(windowWidth, windowHeight);
      angleMode(DEGREES);
@@ -107,7 +105,7 @@ function shake(){
 function deviceShaken(){
     button3 = createButton("try again");
     button3.position(width/2,height/3);
-    button3.touchStarted(soloshake); //en vez de mousePressed para touch es touchStarted
+    button3.touchStarted(clearEverything); //en vez de mousePressed para touch es touchStarted
     
     acx = abs(pAccelerationX);
     acy = abs(pAccelerationY);
@@ -147,5 +145,11 @@ function QuakeDots(){
 function clearEverything() {
     background(204);
     value = 0;
+    textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
  
      }
