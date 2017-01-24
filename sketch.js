@@ -8,20 +8,20 @@ var acz;
 //var shake;
 //var soloshake;
 
-//var button1;
+var button1;
 //var button2;
 var button3;
 //var myChile;
 //var myJapon;
 //var myIndonesia;
-//var myMexico;
+var myMexico;
 //var myResults;
 
-//function preload() {
+function preload() {
     //myChile = loadImage("images/9.5.png");
     //myJapon = loadImage("images/9.0.png");  
     //myIndonesia = loadImage("images/8.6.png");
-    //myMexico = loadImage("images/8.1.png");
+    myMexico = loadImage("images/8.1.png");
 
 function setup(){
      createCanvas(windowWidth, windowHeight);
@@ -104,6 +104,10 @@ function deviceShaken(){
     button3 = createButton("Try again");
     button3.position((width/7)*5, (height/15)*14);
     button3.touchStarted(clearEverything);
+    
+    button1 = createButton("See results");
+    button1.position(width/2,height/3);
+    button1.touchStarted(results); //en vez de mousePressed para touch es touchStarted
     /*
     button3 = createButton("try again");
     button3.position(width/2,height/3);
@@ -143,6 +147,9 @@ function QuakeDots(){
       ellipse(this.xdot, this.ydot, this.diameter, this.diameter);
     };
     
+}
+function results() {
+    image(myMexico,0,0,windowWidth,windowHeight);
 }
 function clearEverything() {
     background(204);
