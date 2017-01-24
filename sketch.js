@@ -8,7 +8,7 @@ var acz;
 
 //var button1;
 //var button2;
-//var button3;
+var button3;
 //var myChile;
 //var myJapon;
 //var myIndonesia;
@@ -91,9 +91,16 @@ function draw(){
       }
   
 }
-   
+function tryagain(){
+    deviceShaken();
+}
+  
 
 function deviceShaken(){
+    button3 = createButton("try again");
+    button3.position(width/2,height/3);
+    button3.touchStarted(tryagain); //en vez de mousePressed para touch es touchStarted
+    
     acx = abs(pAccelerationX);
     acy = abs(pAccelerationY);
     acz = abs(pAccelerationZ);
@@ -102,6 +109,7 @@ function deviceShaken(){
     //create objects
     for (var i = 0; i < value*10; i++){
         dots.push(new QuakeDots());
+        
     } 
     
 }
