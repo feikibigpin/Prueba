@@ -149,7 +149,7 @@ function QuakeDots(){
     
 }
 //function results() {
-    image(myMexico,0,0,windowWidth,windowHeight);
+    //image(myMexico,0,0,windowWidth,windowHeight);
 }
 function clearEverything() {
     background(204);
