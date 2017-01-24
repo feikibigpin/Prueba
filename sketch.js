@@ -2,6 +2,8 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
+var button 2;
+/*
 var acx;
 var acy;
 var acz;
@@ -22,7 +24,7 @@ var button3;
     //myJapon = loadImage("images/9.0.png");  
     //myIndonesia = loadImage("images/8.6.png");
     //myMexico = loadImage("images/8.1.png");
-
+*/
 function setup(){
      createCanvas(windowWidth, windowHeight);
      angleMode(DEGREES);
@@ -30,8 +32,13 @@ function setup(){
 
 function draw(){
      background(204);
-     angleMode(DEGREES);
-    // soloshake();
+    
+     textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1);    
     
     var magnitude = int(map(value, 0, 500, 0, 10)); 
     
@@ -65,10 +72,15 @@ function draw(){
     textAlign(CENTER);
     textStyle(NORMAL);    
     text(value, width/2, height - height/8);
+        
+        
+    button2 = createButton("Try again");
+    button2.position((width/7)*5, (height/15)*14);
+    button2.touchStarted(clearEverything);
     }  
     
 }
-
+/*
 function soloshake(){
      textSize(height/20);
      textAlign(CENTER);
@@ -132,4 +144,13 @@ function QuakeDots(){
     };
     
 }
-
+function clearEverything() {
+    background(204);
+    textSize(height/20);
+     textAlign(CENTER);
+     textStyle(BOLD);
+     fill(0);
+     noStroke();
+     text("SHAKE YOUR DEVICE", width/2,height - height/1.1); 
+ 
+     }
