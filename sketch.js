@@ -2,8 +2,8 @@ var dots = [];
 
 var value = 0;  //starting value of earthquake
 
-var button 2;
-/*
+var button2;
+
 var acx;
 var acy;
 var acz;
@@ -12,7 +12,7 @@ var acz;
 
 //var button1;
 //var button2;
-var button3;
+//var button3;
 //var myChile;
 //var myJapon;
 //var myIndonesia;
